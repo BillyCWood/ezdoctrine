@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #171717;
+    --foreground: #ffffff;
+  }
+}
+*/
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FONTS */
+.dm-sans {
+  font-family: var(--font-dm_sans);
+}
+.dm-display {
+  font-family: var(--font-dm_display);
+}
+.dm-text {
+  font-family: var(--font-dm_text);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  @apply mx-auto px-8 md:px-16 lg:px-32 xl:px-48 2xl:px-80;
+}
+
+.input-text {
+  @apply border-2 border-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 rounded-sm w-96 h-8 pl-2;
+}
