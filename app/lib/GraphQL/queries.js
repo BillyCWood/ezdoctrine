@@ -47,7 +47,9 @@ export const getPost = async (slug) => {
         author {
           name
           id
-          bio
+          picture {
+            url
+          }
         }
         createdAt
         slug
@@ -129,7 +131,36 @@ export const getRecentPosts = async () => {
 
 // Get Post by Category
 
+// Get Author's Profile
+export const getAuthor = async (authorId) => {
+  const query = gql`
+    query GetAuthor($id: ID!) {
+      author(where: {id: $id}) {
+        name
+        bio
+        id
+        picture{
+          url
+        }
+      }
+    }
+  `;
+
+  try{
+
+    const response = await hygraph.request(query, authorId);
+    return response.author;
+
+  } catch(err) {
+
+    console.log(err);
+    return err;
+
+  }
+}
+
 // Get Author's Drafts
+
 // Get Author's Published Posts
 
 // Get Categories

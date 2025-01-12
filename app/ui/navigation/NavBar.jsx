@@ -21,20 +21,20 @@ const NavBar = () => {
 
       <div className='flex items-center gap-x-3'>
         <Menu>
-          <MenuButton className={'flex px-4 py-6 hover:text-black hover:bg-blue-100 transition-colors ease-in-out duration-200'}>About
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ml-1 mt-1">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-
+          <MenuButton className={'flex px-4 py-6 hover:text-black hover:bg-blue-100 transition-colors ease-in-out duration-200'}>
+            About
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 ml-1 mt-1">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
           </MenuButton>
           
           
           <MenuItems anchor="bottom start" modal={false} transition className={'bg-slate-600 text-white dm-sans shadow-sm shadow-black transition duration-150 ease-out data-[closed]:scale-95 data-[closed]:opacity-0'}>
             <MenuItem>
-              <Link href={'/about/faith'} className="block py-1 px-2 data-[focus]:bg-blue-100 data-[focus]:text-black">Statement of Faith</Link>
+              <Link href={'/about/faith'} className="block py-2 px-2 data-[focus]:bg-blue-100 data-[focus]:text-black">Statement of Faith</Link>
             </MenuItem>
             <MenuItem>
-              <Link href={'/about/mission'} className="block py-1 px-2 data-[focus]:bg-blue-100 data-[focus]:text-black">Our Mission</Link>
+              <Link href={'/about/mission'} className="block py-2 px-2 data-[focus]:bg-blue-100 data-[focus]:text-black">Our Mission</Link>
             </MenuItem>
           </MenuItems>
         </Menu>

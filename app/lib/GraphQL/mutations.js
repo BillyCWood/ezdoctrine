@@ -25,6 +25,19 @@ const hygraph = new GraphQLClient(process.env.NEXT_HYGRAPH_ENDPOINT, {
     } 
 */
 
+/*
+Rich Text type from Hygraph
+
+type RichText {
+  raw: RichTextAST!
+  html: String!
+  markdown: String!
+  text: String!
+  json: RichTextAST!
+}
+  
+*/
+
 export const createPost = async (id, content, slug, title, excerpt, connect) => {
     const mutation = gql`
         mutation CreatePost($id: ID, $content: RichTextAST, $slug: String , $title: String , $excerpt: String , $connect: [CategoryWhereUniqueInput!] = [{name: "Hermeneutics", slug: "hermeneutics"}, {name: "Theology", slug: "theology"}, {name: "Ecclesiology", slug: "ecclesiology"}, {name: "Calvinism", slug: "calvinism"}]) {

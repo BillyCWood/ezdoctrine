@@ -1,4 +1,4 @@
-import { withMiddlewareAuthRequired } from "@auth0/nextjs-auth0/edge";
+import { withMiddlewareAuthRequired, getSession, updateSession } from "@auth0/nextjs-auth0/edge";
 
 export default withMiddlewareAuthRequired();
 

@@ -1,8 +1,8 @@
 //'use client'
 //import { useState, useEffect } from 'react';
 import { getFeaturedPosts } from './lib/GraphQL/queries';
-import PostCard from '@/app/ui/posts/PostCard';
-import PostsWidget from '@/app/ui/posts/PostsWidget';
+import PostCard from './ui/posts/PostCard';
+import PostsWidget from './ui/posts/PostsWidget';
 import Image from 'next/image';
 
 

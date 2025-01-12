@@ -1,4 +1,4 @@
-import { getCategories } from '@/app/lib/GraphQL/queries'
+import { getCategories } from '../../../../lib/GraphQL/queries';
 import React from 'react'
 
 export default async function Create() {
@@ -23,7 +23,7 @@ export default async function Create() {
 
 
   return (
-    <form action={createPost} className='flex flex-col gap-y-6 dm-sans mt-10'>
+    <form action={createPost} className='flex flex-col gap-y-6 dm-sans mt-10 max-w-screen-lg mx-auto items-center'>
 
         {/* Title */}
         <div className='flex flex-col'>
@@ -68,8 +68,9 @@ export default async function Create() {
         </div>
 
         {/* Buttons */}
-        <div>
+        <div className='flex gap-x-10'>
             <button type='submit'>Save</button>
+            <button type='submit'>Save &amp; Publish</button>
         </div>
     </form>
   )

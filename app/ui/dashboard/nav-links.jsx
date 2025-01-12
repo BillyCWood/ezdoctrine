@@ -23,7 +23,7 @@ const links = [
 const NavLinks = () => {
   const pathname = usePathname();
   return (
-    <>
+    <aside>
       {links.map((link) => {
         const LinkIcon = link.icon;
         return (
@@ -42,7 +42,7 @@ const NavLinks = () => {
           </Link>
         )
       })}
-    </>
+    </aside>
   )
 }
 

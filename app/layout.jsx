@@ -1,9 +1,9 @@
 import "./globals.css";
 
-import ResponsiveNav from "@/app/ui/navigation/ResponsiveNav";
-import ResponsiveFooter from "@/app/ui/footer/ResponsiveFooter";
-import NavBar from "@/app/ui/navigation/NavBar";
-import Footer from "@/app/ui/footer/Footer";
+import ResponsiveNav from "./ui/navigation/ResponsiveNav";
+import ResponsiveFooter from "./ui/footer/ResponsiveFooter";
+import NavBar from "./ui/navigation/NavBar";
+import Footer from "./ui/footer/Footer";
 
 import { dm_sans, dm_serif_display, dm_serif_text } from "./utils/fonts";
 import { Suspense } from "react";
@@ -25,24 +25,24 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${dm_sans} ${dm_serif_display} ${dm_serif_text} antialiased overflow-x-hidden`}>
-        <div className="flex flex-col justify-between min-h-screen">
-          <header className="sticky top-0">
-            <NavBar />
-            <ResponsiveNav />
-          </header>
-          
-          <main className="mb-auto">
-            <Suspense fallback={ <Loading /> }>
-              {children}
-            </Suspense>
-          </main>
-          
-          <footer className="relative">
-            <Footer />
-            <ResponsiveFooter />
-          </footer>
-        </div>
+      <body className={`${dm_sans} ${dm_serif_display} ${dm_serif_text} antialiased overflow-x-hidden flex flex-col justify-between min-h-screen`}>
+        
+        <header className="sticky top-0">
+          <NavBar />
+          <ResponsiveNav />
+        </header>
+        
+        <main className="mb-auto grow flex">
+          <Suspense fallback={ <Loading /> }>
+            {children}
+          </Suspense>
+        </main>
+        
+        <footer className="relative">
+          <Footer />
+          <ResponsiveFooter />
+        </footer>
+        
       </body>
     </html>
   );

@@ -13,8 +13,9 @@ const PostDetail = ({ post }) => {
     <div className='w-full pt-16'>
       <div className='w-full flex flex-col'>
         <Title title={post.title} />
-        <div className='flex gap-x-6 dm-sans font-thin mt-2'>
-          <Author author={post.author.name} />
+        <div className='flex items-center dm-sans font-thin mt-2'>
+          <Author author={post.author} />
+          <div className='w-[4px] h-[4px] bg-slate-600 rounded-full mx-2' />
           <Date date={moment(post.createdAt).format('MMMM D, YYYY')} />
         </div>
       </div>

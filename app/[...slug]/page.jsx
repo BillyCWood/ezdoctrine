@@ -1,5 +1,5 @@
 import { getPost } from '../lib/GraphQL/queries';
-import Post from '@/app/ui/posts/Post';
+import Post from '../ui/posts/Post';
 
 export default async function Page({ params })  {
   const slug = (await params).slug.join('/');

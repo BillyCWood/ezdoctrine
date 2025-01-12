@@ -1,5 +1,5 @@
 import React from 'react'
-import Create from '@/app/ui/dashboard/posts/create/Create';
+import Create from '../../../ui/dashboard/posts/create/Create';
 
 const Page = () => {
   return (

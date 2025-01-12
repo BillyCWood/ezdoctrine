@@ -1,4 +1,4 @@
-import { getRelatedPosts, getRecentPosts } from '@/app/lib/GraphQL/queries';
+import { getRelatedPosts, getRecentPosts } from '../../lib/GraphQL/queries';
 
 import PostCard from './PostCard';
 
