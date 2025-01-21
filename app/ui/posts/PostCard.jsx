@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const PostCard = ({ post }) => {
   return (
-    <Link href={`/${post.slug}`} className='hover:shadow-xl focus:bg-slate-200 transition-all duration-200 ease-in-out bg-white text-black border-[1px] border-slate-300 min-h-64 min-w-64 max-w-96' >
+    <Link href={`/${post.slug}`} className='hover:shadow-xl focus:bg-gray-100 transition-all duration-200 ease-in-out bg-white text-black border-[1px] border-slate-300 min-h-64 min-w-64 max-w-96' >
         <div className='flex flex-col overflow-hidden p-4 w-full min-h-64'>
             <h1 className='font-[800] text-lg dm-display' >{post.title}</h1>
             <h3 className='font-[300] text-sm mb-2 dm-sans' >{moment(post.createdAt).format('MMM D, YYYY')}</h3>

@@ -38,6 +38,8 @@ type RichText {
   
 */
 
+/** POSTS MUTATIONS **/
+
 export const createPost = async (id, content, slug, title, excerpt, connect) => {
     const mutation = gql`
         mutation CreatePost($id: ID, $content: RichTextAST, $slug: String , $title: String , $excerpt: String , $connect: [CategoryWhereUniqueInput!] = [{name: "Hermeneutics", slug: "hermeneutics"}, {name: "Theology", slug: "theology"}, {name: "Ecclesiology", slug: "ecclesiology"}, {name: "Calvinism", slug: "calvinism"}]) {
@@ -113,3 +115,53 @@ export const unpublishPost = async (id) => {
 // Update
 
 // Delete
+
+/**  PROFILE MUTATIONS **/
+
+// Upload Profile Picture
+export const uploadProfilePicture = async (file) => {
+    const mutation = gql`
+        mutation uploadProfilePicture {
+            createAsset(data: {}) {
+                id
+                url
+                upload {
+                    status
+                    expiresAt
+                    error {
+                        code
+                        message
+                    }
+                    requestPostData {
+                        url
+                        date
+                        key
+                        signature
+                        algorithm
+                        policy
+                        credential
+                        securityToken
+                    }
+                }
+            }
+        }
+    `;
+
+    /* 
+    Data that I need to post as Form Data via fetch using POST method
+    const form = new FormData();
+    form.append('X-Amz-Date', );
+    form.append('key', );
+    form.append('X-Amz-Signature', );
+    form.append('X-Amz-Algorithm', );
+    form.append('policy', );
+    form.append('X-Amz-Credential', );
+    form.append('X-Amz-Security-Token', );
+    form.append('file', File(['<data goes here>'], './test.jpg'));
+
+    fetch('http://', {
+        method: 'POST',
+        body: form
+    });
+    */
+}
