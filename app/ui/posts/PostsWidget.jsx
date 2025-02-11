@@ -15,7 +15,7 @@ export default async function PostsWidget({ slug, currentSlug }) {
     <div className='w-full mb-28'>
 
       <div className={`${slug && hasRelated ? '' : 'hidden'}`}>
-        <h1 className='dm-display text-3xl mt-16'>Related Articles</h1>
+        <p className='dm-display text-3xl mt-16'>Related Articles</p>
         <div className='
           flex flex-col gap-y-10 mt-6
           md:grid md:grid-cols-2 md:gap-6
@@ -27,7 +27,7 @@ export default async function PostsWidget({ slug, currentSlug }) {
         </div>
       </div> 
         
-      <h1 className='dm-display text-3xl mt-16'>Recent Articles</h1>
+      <p className='dm-display text-3xl mt-16'>Recent Articles</p>
       <div className='
         flex flex-col gap-y-10 mt-6
         md:grid md:grid-cols-2 md:gap-6

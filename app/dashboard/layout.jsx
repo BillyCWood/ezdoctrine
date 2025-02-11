@@ -10,7 +10,7 @@ const Layout = async ({ children }) => {
         <div className="w-full flex-none md:w-64 bg-orange-200">
           <Sidenav />
         </div>
-        <div className="max-lg:mt-10 w-full bg-slate-300">
+        <div className="max-lg:mt-10 w-full">
           { children }
         </div>
       </div>

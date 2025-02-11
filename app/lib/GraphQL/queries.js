@@ -58,7 +58,7 @@ export const getPost = async (slug) => {
           name
         }
         content {
-          text
+          json
         }
       }
     }

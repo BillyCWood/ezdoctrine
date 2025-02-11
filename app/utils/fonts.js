@@ -4,7 +4,7 @@ import { DM_Sans, DM_Serif_Display, DM_Serif_Text } from "next/font/google";
 export const dm_sans_init = DM_Sans({
     subsets: ['latin'],
     variable: '--font-dm_sans',
-    weight: ['100', '200', '300', '400', '100', '700', '800', '900'],
+    weight: ['100', '200', '300', '400', '500', '700', '800', '900'],
 });
   
 export const dm_serif_display_init = DM_Serif_Display({

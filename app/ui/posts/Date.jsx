@@ -2,7 +2,7 @@ import React from 'react'
 
 const Date = ({ date }) => {
   return (
-    <h2 className='font-normal'>{date}</h2>
+    <p className='font-normal'>{date}</p>
   )
 }
 

@@ -60,7 +60,7 @@ export const createPost = async (id, content, slug, title, excerpt, connect) => 
                 slug
                 title
                 content {
-                    text
+                    html
                 }
                 excerpt
                 id

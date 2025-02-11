@@ -20,6 +20,32 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.paragraph {
+  @apply mb-4 tracking-normal font-light text-lg
+}
+blockquote {
+  @apply border-l-[3px] border-slate-400 my-6 pl-4
+}
+
+ul {
+  @apply list-disc pl-3
+}
+
+ol {
+  @apply list-decimal pl-3
+}
 
 /* FONTS */
 .dm-sans {
@@ -53,4 +79,38 @@ body {
 
 .input-text {
   @apply border-2 border-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 rounded-sm w-96 h-8 pl-2;
+}
+
+/* TipTap Rich Text editor */
+.tiptap {
+  @apply w-96 md:w-[70vw] min-h-96 
+  p-2
+  bg-white
+  border-[1px] border-slate-400 rounded-b-sm
+  focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+}
+.heading-one {
+  font-size: 2em;
+  font-weight: 900;
+}
+.heading-two {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.heading-three {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.paragraph {
+  @apply mb-4 tracking-normal font-light text-lg
+}
+.tiptap p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.block-quote {
+  @apply border-l-[3px] border-slate-400 my-6 pl-4
 }
